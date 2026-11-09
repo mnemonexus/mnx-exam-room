@@ -1,0 +1,391 @@
+{
+  "schemaVersion": "mnxpack_manifest_v1",
+  "id": "exam-room",
+  "version": "0.1.0",
+  "kind": "experience",
+  "label": "Exam Room",
+  "description": "Practise the written exam. Answer past-paper questions, design the experiment and read the data under a timer, then mark yourself against the scheme and the model answer. Private study pack built from course material.",
+  "tagline": "Read it, write it, mark it against the scheme",
+  "icon": "fa-solid fa-file-pen",
+  "author": "Private study pack for one student",
+  "subjects": [
+    "biochemistry",
+    "molecular biology",
+    "genome expression and maintenance",
+    "biochemical reactions and interactions",
+    "experimental design"
+  ],
+  "knowledgeBinding": {
+    "mode": "none"
+  },
+  "surfaces": {},
+  "practice": {
+    "version": 1,
+    "catalogue": "assets/practice/catalogue.json"
+  },
+  "permissions": [
+    "storage:local"
+  ],
+  "settings": [
+    {
+      "id": "timerStyle",
+      "label": "Timer",
+      "description": "Count down from the suggested time, or count up from zero.",
+      "type": "choice",
+      "default": "down",
+      "options": [
+        {
+          "value": "down",
+          "label": "Count down"
+        },
+        {
+          "value": "up",
+          "label": "Count up"
+        }
+      ]
+    },
+    {
+      "id": "showHints",
+      "label": "Show hints",
+      "description": "Some questions have a hint from the lecturer. Using one is recorded.",
+      "type": "toggle",
+      "default": true
+    }
+  ],
+  "engines": {
+    "mnxSdk": "1.0.0"
+  },
+  "entry": {
+    "logicalPath": "code/main.cjs"
+  },
+  "assets": [
+    {
+      "logicalPath": "assets/practice/catalogue.json",
+      "mimeType": "application/json"
+    },
+    {
+      "logicalPath": "assets/content/babs.json",
+      "mimeType": "application/json"
+    },
+    {
+      "logicalPath": "assets/content/bri.json",
+      "mimeType": "application/json"
+    },
+    {
+      "logicalPath": "assets/content/gem.json",
+      "mimeType": "application/json"
+    },
+    {
+      "logicalPath": "assets/fig/babs-kinetic-runs-f1.png",
+      "mimeType": "image/png"
+    },
+    {
+      "logicalPath": "assets/fig/babs-kobs-plot-f1.png",
+      "mimeType": "image/png"
+    },
+    {
+      "logicalPath": "assets/fig/babs-nitrophenolate-f1.png",
+      "mimeType": "image/png"
+    },
+    {
+      "logicalPath": "assets/fig/babs-poisson-cases-f1.png",
+      "mimeType": "image/png"
+    },
+    {
+      "logicalPath": "assets/fig/babs-poisson-cases-f2.png",
+      "mimeType": "image/png"
+    },
+    {
+      "logicalPath": "assets/fig/babs-poisson-gala-f1.png",
+      "mimeType": "image/png"
+    },
+    {
+      "logicalPath": "assets/fig/babs-residuals-f1.png",
+      "mimeType": "image/png"
+    },
+    {
+      "logicalPath": "assets/fig/babs-stag-lm-f1.png",
+      "mimeType": "image/png"
+    },
+    {
+      "logicalPath": "assets/fig/bri-p2425-q01-f1.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "logicalPath": "assets/fig/bri-p2425-q02-f1.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "logicalPath": "assets/fig/bri-p2425-q04-f1.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "logicalPath": "assets/fig/bri-p2425-q05-f1.png",
+      "mimeType": "image/png"
+    },
+    {
+      "logicalPath": "assets/fig/bri-p2425-q06-f1.png",
+      "mimeType": "image/png"
+    },
+    {
+      "logicalPath": "assets/fig/bri-p2425-q07-f1.png",
+      "mimeType": "image/png"
+    },
+    {
+      "logicalPath": "assets/fig/bri-p2425-q08-f1.png",
+      "mimeType": "image/png"
+    },
+    {
+      "logicalPath": "assets/fig/bri-p2425-q09-f1.png",
+      "mimeType": "image/png"
+    },
+    {
+      "logicalPath": "assets/fig/bri-p2425-q10-f1.png",
+      "mimeType": "image/png"
+    },
+    {
+      "logicalPath": "assets/fig/bri-p2425-q11-f1.png",
+      "mimeType": "image/png"
+    },
+    {
+      "logicalPath": "assets/fig/bri-p2526-q01-f1.png",
+      "mimeType": "image/png"
+    },
+    {
+      "logicalPath": "assets/fig/bri-p2526-q02-f1.png",
+      "mimeType": "image/png"
+    },
+    {
+      "logicalPath": "assets/fig/bri-p2526-q03-f1.png",
+      "mimeType": "image/png"
+    },
+    {
+      "logicalPath": "assets/fig/bri-p2526-q04-f1.png",
+      "mimeType": "image/png"
+    },
+    {
+      "logicalPath": "assets/fig/bri-p2526-q04-f2.png",
+      "mimeType": "image/png"
+    },
+    {
+      "logicalPath": "assets/fig/bri-p2526-q04-f3.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "logicalPath": "assets/fig/bri-p2526-q05-f1.png",
+      "mimeType": "image/png"
+    },
+    {
+      "logicalPath": "assets/fig/bri-p2526-q06-f1.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "logicalPath": "assets/fig/bri-p2526-q07-f1.png",
+      "mimeType": "image/png"
+    },
+    {
+      "logicalPath": "assets/fig/bri-p2526-q08-f1.png",
+      "mimeType": "image/png"
+    },
+    {
+      "logicalPath": "assets/fig/bri-p2526-q11-f1.png",
+      "mimeType": "image/png"
+    },
+    {
+      "logicalPath": "assets/fig/bri-w-ans-bsa-f1.png",
+      "mimeType": "image/png"
+    },
+    {
+      "logicalPath": "assets/fig/bri-w-ans-bsa-f2.png",
+      "mimeType": "image/png"
+    },
+    {
+      "logicalPath": "assets/fig/bri-w-emsa-dna-f1.png",
+      "mimeType": "image/png"
+    },
+    {
+      "logicalPath": "assets/fig/bri-w-emsa-mutants-f1.png",
+      "mimeType": "image/png"
+    },
+    {
+      "logicalPath": "assets/fig/bri-w-emsa-rna-f1.png",
+      "mimeType": "image/png"
+    },
+    {
+      "logicalPath": "assets/fig/bri-w-heme-f1.png",
+      "mimeType": "image/png"
+    },
+    {
+      "logicalPath": "assets/fig/bri-w-itc-xz-f1.png",
+      "mimeType": "image/png"
+    },
+    {
+      "logicalPath": "assets/fig/bri-w-ms-esi-small-f1.png",
+      "mimeType": "image/png"
+    },
+    {
+      "logicalPath": "assets/fig/bri-w-ms-glycan-f1.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "logicalPath": "assets/fig/bri-w-ms-lysozyme-f1.png",
+      "mimeType": "image/png"
+    },
+    {
+      "logicalPath": "assets/fig/bri-w-p450-f1.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "logicalPath": "assets/fig/bri-w-seauc-f1.png",
+      "mimeType": "image/png"
+    },
+    {
+      "logicalPath": "assets/fig/gem-p2425-q01-f1.png",
+      "mimeType": "image/png"
+    },
+    {
+      "logicalPath": "assets/fig/gem-p2425-q01-f2.png",
+      "mimeType": "image/png"
+    },
+    {
+      "logicalPath": "assets/fig/gem-p2425-q02-f1.png",
+      "mimeType": "image/png"
+    },
+    {
+      "logicalPath": "assets/fig/gem-p2425-q02-f2.png",
+      "mimeType": "image/png"
+    },
+    {
+      "logicalPath": "assets/fig/gem-p2425-q03-f1.png",
+      "mimeType": "image/png"
+    },
+    {
+      "logicalPath": "assets/fig/gem-p2425-q06-f1.png",
+      "mimeType": "image/png"
+    },
+    {
+      "logicalPath": "assets/fig/gem-p2425-q06-f2.png",
+      "mimeType": "image/png"
+    },
+    {
+      "logicalPath": "assets/fig/gem-p2425-q07-f1.png",
+      "mimeType": "image/png"
+    },
+    {
+      "logicalPath": "assets/fig/gem-p2425-q07-f2.png",
+      "mimeType": "image/png"
+    },
+    {
+      "logicalPath": "assets/fig/gem-p2425-q08-f1.png",
+      "mimeType": "image/png"
+    },
+    {
+      "logicalPath": "assets/fig/gem-p2425-q09-f1.png",
+      "mimeType": "image/png"
+    },
+    {
+      "logicalPath": "assets/fig/gem-p2526-q02-f1.png",
+      "mimeType": "image/png"
+    },
+    {
+      "logicalPath": "assets/fig/gem-p2526-q02-f2.png",
+      "mimeType": "image/png"
+    },
+    {
+      "logicalPath": "assets/fig/gem-p2526-q05-f1.png",
+      "mimeType": "image/png"
+    },
+    {
+      "logicalPath": "assets/fig/gem-p2526-q06-f1.png",
+      "mimeType": "image/png"
+    },
+    {
+      "logicalPath": "assets/fig/gem-p2526-q06-f2.png",
+      "mimeType": "image/png"
+    },
+    {
+      "logicalPath": "assets/fig/gem-p2526-q07-f1.png",
+      "mimeType": "image/png"
+    },
+    {
+      "logicalPath": "assets/fig/gem-p2526-q08-f1.png",
+      "mimeType": "image/png"
+    },
+    {
+      "logicalPath": "assets/fig/gem-w-cyclind2-f1.png",
+      "mimeType": "image/png"
+    },
+    {
+      "logicalPath": "assets/fig/gem-w-ef2k-f1.png",
+      "mimeType": "image/png"
+    },
+    {
+      "logicalPath": "assets/fig/gem-w-erbb4-f1.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "logicalPath": "assets/fig/gem-w-gt-mismatch-f1.png",
+      "mimeType": "image/png"
+    },
+    {
+      "logicalPath": "assets/fig/gem-w-loki-f1.png",
+      "mimeType": "image/png"
+    },
+    {
+      "logicalPath": "assets/fig/gem-w-loki-f2.png",
+      "mimeType": "image/png"
+    },
+    {
+      "logicalPath": "assets/fig/gem-w-mir133-f1.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "logicalPath": "assets/fig/gem-w-mir142-f1.png",
+      "mimeType": "image/png"
+    },
+    {
+      "logicalPath": "assets/fig/gem-w-polii-speed-f1.png",
+      "mimeType": "image/png"
+    },
+    {
+      "logicalPath": "assets/fig/gem-w-polysome-f1.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "logicalPath": "assets/fig/gem-w-polysome-f2.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "logicalPath": "assets/fig/gem-w-pp1-f1.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "logicalPath": "assets/fig/gem-w-s6-f1.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "logicalPath": "assets/fig/gem-w-sam68-f1.png",
+      "mimeType": "image/png"
+    },
+    {
+      "logicalPath": "assets/fig/gem-w-sam68-f2.png",
+      "mimeType": "image/png"
+    },
+    {
+      "logicalPath": "assets/fig/gem-w-sbl1-f1.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "logicalPath": "assets/fig/gem-w-xpv-f1.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "logicalPath": "assets/fig/gem-w-zmat3-f1.png",
+      "mimeType": "image/png"
+    },
+    {
+      "logicalPath": "assets/fig/gem-w-zmat3-f2.png",
+      "mimeType": "image/png"
+    }
+  ]
+}

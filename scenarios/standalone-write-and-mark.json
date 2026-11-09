@@ -1,0 +1,18 @@
+{
+  "title": "A short past-paper question, written and marked",
+  "surface": "standalone",
+  "drive": [
+    { "waitFor": "[data-view=home]" },
+    { "click": "[data-activity=gem-p2425-q05]" },
+    { "waitFor": "[data-answer=a]" },
+    { "fill": "[data-answer=a]", "text": "Changes to domain IV could change how tightly DnaA binds double-stranded DNA, so it would recognise the DnaA boxes at oriC less efficiently, and origin firing would change in frequency." },
+    { "click": "[data-action=finish-writing]" },
+    { "waitFor": "[data-point=\"a/1\"]" },
+    { "click": "[data-point=\"a/1\"]" },
+    { "click": "[data-point=\"a/2\"]" },
+    { "waitForText": "[data-role=total]", "text": "Ticked 2 of 3" },
+    { "click": "[data-action=finish-marking]" },
+    { "expect": "complete" }
+  ],
+  "expectResult": { "completed": true, "practice": { "version": 1, "activityId": "gem-p2425-q05", "valid": true, "hintsUsed": 0, "attempts": 1 } }
+}

@@ -1,0 +1,43 @@
+{
+  "title": "A hint is used, and reported",
+  "surface": "standalone",
+  "drive": [
+    {
+      "click": "[data-activity=gem-w-gt-mismatch-gel]"
+    },
+    {
+      "waitFor": "[data-part=b] [data-action=hint]"
+    },
+    {
+      "click": "[data-part=b] [data-action=hint]"
+    },
+    {
+      "waitForText": "[data-part=b] [data-role=hint]",
+      "text": "over interpreting"
+    },
+    {
+      "fill": "[data-answer=a]",
+      "text": "The extract made part of the DNA cuttable by SalI but not AclI, and the sizes of the pieces show the cut was near the mismatch."
+    },
+    {
+      "click": "[data-action=finish-writing]"
+    },
+    {
+      "waitFor": "[data-point]"
+    },
+    {
+      "click": "[data-action=finish-marking]"
+    },
+    {
+      "expect": "complete"
+    }
+  ],
+  "expectResult": {
+    "completed": true,
+    "practice": {
+      "activityId": "gem-w-gt-mismatch-gel",
+      "valid": true,
+      "hintsUsed": 1
+    }
+  }
+}

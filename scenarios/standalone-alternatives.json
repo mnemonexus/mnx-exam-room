@@ -1,0 +1,17 @@
+{
+  "title": "Two ways to answer: only the strategy you wrote is marked",
+  "surface": "standalone",
+  "drive": [
+    { "click": "[data-activity=bri-p2425-q08]" },
+    { "waitFor": "[data-answer=a]" },
+    { "fill": "[data-answer=a]", "text": "The pre-protein is a monomer of about 30 kDa. After cleavage there is a peak for the 18 kDa protease and peaks near 10 kDa and 50 kDa, which are monomeric B and dimeric A." },
+    { "fill": "[data-answer=b]", "text": "Label the RNA so it can be seen on the gel, titrate increasing amounts of protein C against each RNA and look for supershifts, then compare the supershift patterns of the two RNAs." },
+    { "click": "[data-action=finish-writing]" },
+    { "waitForText": "[data-part=c] [data-role=not-marked]", "text": "not marked" },
+    { "click": "[data-point=\"b/1\"]" },
+    { "waitForText": "[data-role=total]", "text": "of 12" },
+    { "click": "[data-action=finish-marking]" },
+    { "expect": "complete" }
+  ],
+  "expectResult": { "completed": true, "practice": { "activityId": "bri-p2425-q08", "valid": true } }
+}

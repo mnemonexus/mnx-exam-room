@@ -1,0 +1,18 @@
+{
+  "title": "Design the experiment: written under headings, each marked on its own points",
+  "surface": "standalone",
+  "drive": [
+    { "click": "[data-filter=\"Kind:design\"]" },
+    { "click": "[data-activity=gem-p2425-qb]" },
+    { "waitFor": "[data-part=method]" },
+    { "fill": "[data-answer=method]", "text": "Use an Ames test with a histidine-requiring Salmonella strain such as TA1538, spot compound X on discs with and without liver extract, plate at a known number of colony forming units on histidine-free medium and culture for 24 to 48 hours." },
+    { "fill": "[data-answer=controls]", "text": "Use the same discs without liver extract, and the TA1535 strain, which carries a substitution mutation, as a comparison." },
+    { "fill": "[data-answer=results]", "text": "More revertant colonies on TA1538 than on TA1535, and an increase only when liver extract is present." },
+    { "click": "[data-action=finish-writing]" },
+    { "waitFor": "[data-part=method] [data-point]" },
+    { "click": "[data-part=method] [data-point]" },
+    { "click": "[data-action=finish-marking]" },
+    { "expect": "complete" }
+  ],
+  "expectResult": { "completed": true, "practice": { "activityId": "gem-p2425-qb", "valid": true } }
+}

@@ -1,0 +1,42 @@
+{
+  "title": "A question written for this pack says so",
+  "surface": "standalone",
+  "drive": [
+    {
+      "click": "[data-filter=\"Module:babs\"]"
+    },
+    {
+      "click": "[data-activity=babs-data-residuals]"
+    },
+    {
+      "waitForText": "[data-role=provenance]",
+      "text": "written for this pack"
+    },
+    {
+      "waitFor": "[data-answer=a]"
+    },
+    {
+      "fill": "[data-answer=a]",
+      "text": "A residual is the difference between an observed value and the value the fitted model predicts at the same x, and the aim of the regression is to make these as small as possible and without a pattern."
+    },
+    {
+      "click": "[data-action=finish-writing]"
+    },
+    {
+      "waitFor": "[data-point]"
+    },
+    {
+      "click": "[data-action=finish-marking]"
+    },
+    {
+      "expect": "complete"
+    }
+  ],
+  "expectResult": {
+    "completed": true,
+    "practice": {
+      "activityId": "babs-data-residuals",
+      "valid": true
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "exam-room-addon",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Exam Room: a MnemoNexus practice add-on engine. Bring your own content.",
+  "scripts": {
+    "verify": "node dev/verify-content.mjs",
+    "content": "node dev/build-content.mjs",
+    "typecheck": "node ../mnx-addon-kit-release/node_modules/typescript/bin/tsc -p tsconfig.json",
+    "test": "bun test test",
+    "check": "bun run content && bun run typecheck && bun run test && cd ../mnx-addon-kit-release && bun run check \"../Exam Room\"",
+    "pack": "bun run content && cd ../mnx-addon-kit-release && bun run pack \"../Exam Room\""
+  },
+  "license": "MIT"
+}

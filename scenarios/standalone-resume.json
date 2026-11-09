@@ -1,0 +1,18 @@
+{
+  "title": "An interrupted answer comes back where it stopped",
+  "surface": "standalone",
+  "drive": [
+    { "click": "[data-activity=gem-p2425-q05]" },
+    { "fill": "[data-answer=a]", "text": "Domain IV binds DNA, so changing it would alter binding of the DnaA boxes at oriC and the frequency of origin firing." },
+    { "wait": 1200 },
+    { "relaunch": true },
+    { "click": "[data-activity=gem-p2425-q05]" },
+    { "waitForText": "[data-role=resumed]", "text": "Welcome back" },
+    { "waitFor": "[data-answer=a]" },
+    { "click": "[data-action=finish-writing]" },
+    { "waitForText": "[data-role=my-answer]", "text": "origin firing" },
+    { "click": "[data-action=finish-marking]" },
+    { "expect": "complete" }
+  ],
+  "expectResult": { "completed": true, "practice": { "activityId": "gem-p2425-q05", "valid": true } }
+}

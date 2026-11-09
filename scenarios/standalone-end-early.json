@@ -1,0 +1,12 @@
+{
+  "title": "A run ended early reports valid false",
+  "surface": "standalone",
+  "drive": [
+    { "click": "[data-activity=gem-p2425-q05]" },
+    { "fill": "[data-answer=a]", "text": "Not sure about this one." },
+    { "click": "[data-action=end]" },
+    { "click": "[data-action=confirm-end]" },
+    { "expect": "complete" }
+  ],
+  "expectResult": { "completed": false, "practice": { "version": 1, "activityId": "gem-p2425-q05", "valid": false, "criteria": [] } }
+}
